@@ -1,0 +1,10 @@
+type Query {
+  users: [User]
+}
+
+type User {
+  id: Int
+  login: String,
+  avatar_url: String,
+  url: String
+}
