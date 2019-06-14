@@ -1,11 +1,23 @@
-import { Resolver, Query } from '@nestjs/graphql';
+import { Resolver, Query, Args } from '@nestjs/graphql';
 import fetch from 'node-fetch';
+import { BASE_URL } from 'src/constants/constans.module';
 
 @Resolver('Users')
 export class UsersResolver {
+    private baseUrl: string = BASE_URL;
+
     @Query()
     async users() {
-         const response = await fetch('https://api.github.com/users');
+         const response = await fetch(`${this.baseUrl}/users`);
+         return await response.json();
+    }
+
+    @Query('user')
+    async user(
+        @Args('login')
+        login: string,
+    ) {
+         const response = await fetch(`${this.baseUrl}/users/${login}`);
          return await response.json();
     }
 }
