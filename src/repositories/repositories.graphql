@@ -59,7 +59,7 @@ type Repositories {
     size: Int,
     stargazers_count: Int,
     watchers_count: Int,
-    language: Boolean,
+    language: String,
     has_issues: Boolean,
     has_projects: Boolean,
     has_downloads: Boolean,

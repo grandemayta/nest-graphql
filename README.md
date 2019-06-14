@@ -5,8 +5,33 @@
 
 Create a GraphQL API over an existing Rest Api. In this tutorial I used the following Github's APIS:
 - Get users => https://api.github.com/users
+```graphql
+  {
+    users {
+      login,
+      avatar_url
+    }
+  }
+```
 - Get user by ID => https://api.github.com/users/{id}
+```graphql
+  {
+    user(login: "grandemayta") {
+      name,
+      company,
+      location
+    }
+  }
+```
 - Get User repositories => https://api.github.com/users/{id}/repos
+```graphql
+  {
+    users {
+      login,
+      avatar_url
+    }
+  }
+```
 
 ## Installation
 
