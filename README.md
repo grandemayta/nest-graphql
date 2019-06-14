@@ -3,7 +3,7 @@
 [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 [![made-with-javascript-doc](https://img.shields.io/badge/Made%20with-Javascript-1f425f.svg)](https://www.sphinx-doc.org/)
 
-Create a GraphQL API over an existing Rest Api. In this tutorial I used the following Github's APIS:
+Create a GraphQL API over an existing Rest Api. I deployed this project on Heroku. You can use the IDE on this [link](https://nestjs-graphql.herokuapp.com/graphql). I used the following Github's APIS:
 - Get users => https://api.github.com/users
 ```graphql
   {
@@ -26,9 +26,9 @@ Create a GraphQL API over an existing Rest Api. In this tutorial I used the foll
 - Get User repositories => https://api.github.com/users/{id}/repos
 ```graphql
   {
-    users {
-      login,
-      avatar_url
+    repositories(login: "grandemayta") {
+      name,
+      language
     }
   }
 ```
@@ -63,20 +63,6 @@ $ npm run test:e2e
 
 # test coverage
 $ npm run test:cov
-```
-
-# GraphQL Playground IDE
-I deploy this project on Heroku. You can use the IDE on this [link](https://nestjs-graphql.herokuapp.com/graphql):
-
-Add the following snippet in the IDE:
-
-```graphql
-  {
-    users {
-      login,
-      avatar_url
-    }
-  }
 ```
 
 ## Created with Nest
