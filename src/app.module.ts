@@ -7,6 +7,7 @@ import { RepositoriesModule } from './repositories/repositories.module';
   imports: [
     GraphQLModule.forRoot({
       typePaths: ['./**/*.graphql'],
+      playground: true,
      }),
     UsersModule,
     RepositoriesModule,

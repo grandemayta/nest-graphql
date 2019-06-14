@@ -1,6 +1,6 @@
 import { Resolver, Query, Args } from '@nestjs/graphql';
 import fetch from 'node-fetch';
-import { BASE_URL } from 'src/constants/constans.module';
+import { BASE_URL } from '../constants/constans.module';
 
 @Resolver('Users')
 export class UsersResolver {
